@@ -43,7 +43,7 @@ network = regression(network, optimizer='adam',
                      learning_rate=0.001)
 ```
 
-6.	Model is fit with the below conditions. At the end of 100 epochs, an accuracy of 94.97% is attained. Model takes about half a day to train.
+6.	Model is fit with the below conditions. At the end of 100 epochs, an accuracy of 91.90% is attained. Model takes about half a day to train.
 
 ```
 model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
@@ -73,54 +73,53 @@ Ensemble methods can achieve high accuracy by building several classifiers and r
 each one independently. When a classifier makes a decision, you can make use of the most
 common and the average decision. If we use the most common method, it is called voting.
 ```
-```
-Predicting bird species with random forests
+
+#Predicting bird species with random forests
 
 Here we will be using random forests to predict a bird's species. We will use the Caltech- UC San Diego dataset (http://www.vision.caltech.edu/visipedia/CUB–2OO–2Oll.html), which contains about 12,000 photos of birds from 200 different species. Here we are not going to look at the pictures because that would need a convolutional neural network (CNN) and this will be covered in later chapters. CNNs can handle pictures much better than a random forest. Instead, we will be using attributes of the birds such as size, shape, and color.
-```
+
 [data.zip](https://deepai.org/dataset/cub-200-2011)
 
-```
+
 
 Making a confusion matrix for the data
 
 Let's make a confusion matrix to see which birds the dataset confuses. The confusion_matrix function from scikit-learn will produce the matrix, but it's a pretty big
 
-```
-```
+
 Since the bird's names are sorted, lesser is the square of confusion. Let's compare this with the simple decision tree:
-```
+
 ![decision_tree](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/decision%20tree.jpg)
 
-```
+
 Here, the accuracy is 27%, which is less than the previous 44% accuracy. Therefore, the decision tree is worse. If we use a Support Vector Machine (SVM), which is the neural network approach, the output is 29%:
-```
+
 
 ![svm](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/Support%20Vector%20Machine%20(svm).jpg)
 
 
-```
+
 The random forest is still better.
 
 
 Let's perform cross-validation to make sure that we split the training test in different ways. The output is still 44% for the random forest, 25% for our decision tree, and 27% for SVM, as shown in the following screenshot:
 
-```
+
 
 ![compare](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/comparing%20image.jpg)
 
-```
+
 The best results are reflected through random forests since we had some options and questions with random forests.
 For example, how many different questions can each tree ask? How many attributes does it look at, and how many trees are there? Well, there are a lot of parameters to look through, so let's just make a loop and try them all:
-```
+
 ![random_forest](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/random%20forest.jpg)
-```
+
 These are all the accuracies, but it would be better to visualize this in a graph, as shown here:
-```
+
 ![campare_img](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/comparing%20image.jpg)
-```
+
 We can see that increasing the number of trees produces a better outcome. Also, increasing the number of features produces better outcomes if you are able to see more features, but ultimately, if you're at about 20 to 30 features and you have about 75 to 100 trees, that's about as good as you're going to get an accuracy of 45%.
-```
+
 
 
 References:
