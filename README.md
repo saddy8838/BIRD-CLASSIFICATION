@@ -90,13 +90,13 @@ Let's make a confusion matrix to see which birds the dataset confuses. The confu
 ```
 Since the bird's names are sorted, lesser is the square of confusion. Let's compare this with the simple decision tree:
 ```
-(https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/decision%20tree.jpg)
+![decision_tree](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/decision%20tree.jpg)
 
 ```
 Here, the accuracy is 27%, which is less than the previous 44% accuracy. Therefore, the decision tree is worse. If we use a Support Vector Machine (SVM), which is the neural network approach, the output is 29%:
 ```
 
-(https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/Support%20Vector%20Machine%20(svm).jpg)
+![svm](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/Support%20Vector%20Machine%20(svm).jpg)
 
 
 ```
@@ -107,7 +107,7 @@ Let's perform cross-validation to make sure that we split the training test in d
 
 ```
 
-(https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/comparing%20image.jpg)
+![compare](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/comparing%20image.jpg)
 
 References:
 
