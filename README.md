@@ -52,21 +52,6 @@ model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
           run_id='bird-classifier')
 ```
 
-7.	To predict, save the model, restore model and then pass a bird image to the model for it to make a prediction. Download any bird image from Google, save it in the same path as the notebook with the name “birdtest1.bmp”.  Resize this test image to the network’s shape i.e. to None/1,32,32,3.
-
-```
-model.save("bird-classifier.tfl")
-model.load("bird-classifier.tfl")
-img = scipy.ndimage.imread("birdtest1.bmp", mode="RGB")
-img = scipy.misc.imresize(img, (32, 32), interp="bicubic").astype(np.float32, casting='unsafe')
-prediction = model.predict([img])
-```
-
-8.	Reducing the number of epochs reduces accuracy and even for a test image with only one clear bird, reduces true positive prediction. 
-
-9.	Removing the third convolutional layer makes a difference in accuracy. While originally for 10 epochs is 89.67%, after removal of layer it becomes 88.68%.
-a
-10.	Performing the dropout before the fully connected layers also affects accuracy, accuracy reduces. It changed from 89.67% to 88.70% for 10 epochs.
 
 References:
 
