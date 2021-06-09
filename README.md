@@ -52,10 +52,65 @@ model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
           run_id='bird-classifier')
 ```
 
+#Prediction with Random Forests
+
+```
+In this chapter, we're going to look at classification techniques with random forests. We're
+going to use scikit-learn, just like we did in the previous chapter. We're going to look at
+examples of predicting bird species from descriptive attributes and then use a confusion
+matrix on them.
+Here's a detailed list of the topics:
+Classification and techniques for evaluation
+Predicting bird species with random forests
+Confusion matrix
+```
+
+Random forests
+
+```
+Random forests are extensions of decision trees and are a kind of ensemble method.
+Ensemble methods can achieve high accuracy by building several classifiers and running a
+each one independently. When a classifier makes a decision, you can make use of the most
+common and the average decision. If we use the most common method, it is called voting.
+```
+```
+Predicting bird species with random forests
+
+Here we will be using random forests to predict a bird's species. We will use the Caltech- UC San Diego dataset (http://www.vision.caltech.edu/visipedia/CUB–2OO–2Oll.html), which contains about 12,000 photos of birds from 200 different species. Here we are not going to look at the pictures because that would need a convolutional neural network (CNN) and this will be covered in later chapters. CNNs can handle pictures much better than a random forest. Instead, we will be using attributes of the birds such as size, shape, and color.
+```
+[data.zip](https://deepai.org/dataset/cub-200-2011)
+
+```
+
+Making a confusion matrix for the data
+
+Let's make a confusion matrix to see which birds the dataset confuses. The confusion_matrix function from scikit-learn will produce the matrix, but it's a pretty big
+
+```
+```
+Since the bird's names are sorted, lesser is the square of confusion. Let's compare this with the simple decision tree:
+```
+(https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/decision%20tree.jpg)
+
+```
+Here, the accuracy is 27%, which is less than the previous 44% accuracy. Therefore, the decision tree is worse. If we use a Support Vector Machine (SVM), which is the neural network approach, the output is 29%:
+```
+
+(https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/Support%20Vector%20Machine%20(svm).jpg)
+
+
+```
+The random forest is still better.
+
+
+Let's perform cross-validation to make sure that we split the training test in different ways. The output is still 44% for the random forest, 25% for our decision tree, and 27% for SVM, as shown in the following screenshot:
+
+```
+
+(https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/comparing%20image.jpg)
 
 References:
 
 [Medium](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721)
 
 
-[data.zip](https://deepai.org/dataset/cub-200-2011)
