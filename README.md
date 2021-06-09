@@ -51,7 +51,7 @@ model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
           snapshot_epoch=True,
           run_id='bird-classifier')
 ```
-
+![cnn](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/CNN.png)
 # Prediction with Random Forests
 
 ```
