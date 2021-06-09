@@ -109,6 +109,20 @@ Let's perform cross-validation to make sure that we split the training test in d
 
 ![compare](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/comparing%20image.jpg)
 
+```
+The best results are reflected through random forests since we had some options and questions with random forests.
+For example, how many different questions can each tree ask? How many attributes does it look at, and how many trees are there? Well, there are a lot of parameters to look through, so let's just make a loop and try them all:
+```
+![random_forest](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/random%20forest.jpg)
+```
+These are all the accuracies, but it would be better to visualize this in a graph, as shown here:
+```
+![campare_img](https://github.com/saddy8838/BIRD-CLASSIFICATION/blob/main/comparing%20image.jpg)
+```
+We can see that increasing the number of trees produces a better outcome. Also, increasing the number of features produces better outcomes if you are able to see more features, but ultimately, if you're at about 20 to 30 features and you have about 75 to 100 trees, that's about as good as you're going to get an accuracy of 45%.
+```
+
+
 References:
 
 [Medium](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721)
