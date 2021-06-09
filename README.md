@@ -56,3 +56,6 @@ model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
 References:
 
 [Medium](https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721)
+
+
+[data.zip](https://deepai.org/dataset/cub-200-2011)
