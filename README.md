@@ -52,7 +52,7 @@ model.fit(X, Y, n_epoch=100, shuffle=True, validation_set=(X_test, Y_test),
           run_id='bird-classifier')
 ```
 
-#Prediction with Random Forests
+# Prediction with Random Forests
 
 ```
 In this chapter, we're going to look at classification techniques with random forests. We're
@@ -74,7 +74,7 @@ each one independently. When a classifier makes a decision, you can make use of 
 common and the average decision. If we use the most common method, it is called voting.
 ```
 
-#Predicting bird species with random forests
+# Predicting bird species with random forests
 
 Here we will be using random forests to predict a bird's species. We will use the Caltech- UC San Diego dataset (http://www.vision.caltech.edu/visipedia/CUB–2OO–2Oll.html), which contains about 12,000 photos of birds from 200 different species. Here we are not going to look at the pictures because that would need a convolutional neural network (CNN) and this will be covered in later chapters. CNNs can handle pictures much better than a random forest. Instead, we will be using attributes of the birds such as size, shape, and color.
 
